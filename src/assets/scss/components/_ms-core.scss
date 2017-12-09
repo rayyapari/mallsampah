@@ -1,0 +1,128 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font: {
+		family: $font-myriadpro-r;
+		size: 14px;
+    }
+    overflow-x: hidden;
+}
+
+a {
+    outline: none;
+    color: $color-green;
+    cursor: pointer;
+
+    &:focus,
+    &:visited,
+    &:active,
+    &:hover {
+        outline: none;
+        text-decoration: none;
+    }
+
+    &.ms-btn {
+        &:hover {
+            color: $color-white-primary;
+        }
+    }
+}
+
+textarea {
+    max-width: 100%;
+    resize: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+strong {
+    font-weight: 600 !important;
+}
+
+.ms-no-padding {
+    padding: 0 !important;
+
+    &--left {
+        padding-left: 0 !important;
+    }
+
+    &--right {
+        padding-right: 0 !important;
+    }
+}
+
+.ms-no-margin {
+    margin: 0 !important;
+
+    &--left {
+        margin-left: 0 !important;
+    }
+
+    &--right {
+        margin-right: 0 !important;
+    }
+}
+
+.ms-no-border {
+    border: 0 !important;
+}
+
+.ms-truncate {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ms-centered {
+    margin: 0 auto !important;
+}
+
+.ms-overlay {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    left: -100%;
+    opacity: 0.7;
+    z-index: 12;
+    cursor: pointer;
+}
+
+.ms-content {
+    padding-top: 55px;
+    min-height: calc(100vh - 416.5px);
+}
+
+.ms-orbit {
+
+    .orbit-previous,
+    .orbit-next {
+        cursor: pointer;
+    }
+
+    .orbit-caption {
+        bottom: 50%;
+        left: 5%;
+        transform: translateY(50%);
+        background-color: transparent;
+        // height: auto;
+        // max-height: 175px;
+        max-width: 525px;
+    }
+
+    .orbit-title {
+        font-size: $font-size-display-1;
+    }
+
+    .orbit-desc {
+        font-size: $font-size-title;
+    }
+
+    i.fa {
+        font-size: 24px;
+    }
+}

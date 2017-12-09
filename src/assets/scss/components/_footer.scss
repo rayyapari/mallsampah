@@ -1,0 +1,104 @@
+.ms-footer {
+    .footer-top {
+        color: $color-white-primary;
+        background-color: $color-green;
+        padding: 20px 0;
+
+        @include breakpoint(medium down) {
+            text-align: center;
+            padding: 20px 15px;
+        }
+
+        .footer__content {
+
+            label {
+                display: inline-block;
+                color: $color-white-primary;
+            }
+
+            input {
+                display: inline-block;
+                max-width: 300px;
+                margin: 0 10px;
+
+                @include breakpoint(medium down) {
+                    max-width: 100%;
+                    margin: 10px 0;
+                 }
+            }
+
+            button {
+                display: inline-block;
+                max-width: 100px;
+
+                @include breakpoint(medium down) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        color: $color-white-primary;
+        background-color: #383637;
+        padding: 50px 0;
+
+        .footer__content {
+            @include breakpoint(small only) {
+                margin-bottom: 25px;
+            }
+
+            &--socmed {
+                margin-top: 50px;
+
+                @include breakpoint(small only) {
+                    margin-top: 25px;
+                }
+            }
+        }
+
+        .footer__links {
+            list-style: none;
+            margin: 10px 0 0;
+            color: $color-white-secondary;
+
+            &--socmed {
+                font-size: $font-size-title;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        transition: color 0.3s ease;
+                        
+                        &:hover {
+                            color: $color-yellow;
+                        }
+                    }
+                }
+
+                li:nth-child(2) {
+                    margin: 0 15px;
+                }
+            }
+            
+            a {
+                color: $color-white-secondary;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $color-yellow;
+                }
+            }
+        }
+
+        .footer__copyrights {
+            margin-top: 35px;
+            color: $color-white-secondary;
+
+            @include breakpoint(small only) {
+                margin-top: 0;
+            }
+        }
+    }
+}

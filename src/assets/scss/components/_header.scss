@@ -1,0 +1,102 @@
+.ms-drawer {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    z-index: 13;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+    transition: left 0.3s ease;
+
+    &__header {
+        line-height: 52px;
+        padding: 0 20px;
+        font-size: $font-size-title;
+        color: $color-black-primary;
+    }
+
+    &__menu {
+        padding: 0 20px;
+
+        li {
+            border-bottom: 1px solid $color-border;
+            
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        a {
+            height: 48px;
+            color: $color-black-primary;
+            padding: 17px 0;
+
+            &:hover {
+                color: $color-green;
+            }
+
+            i {
+                height: 18px;
+                width: 18px;
+                font-size: 18px;
+                margin-right: 8px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &__menu-group {
+        strong {
+            display: block;
+            color: $color-black-disabled;
+            padding: 15px 20px 5px;
+            font-size: 12px;
+            background-color: #FBFBFB;
+            border: {
+                top: 1px solid $color-border;
+                bottom: 1px solid $color-border;
+            }
+        }
+    }
+}
+
+.ms-header {
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    background-color: $color-green;
+    color: $color-white-primary;
+    z-index: 11;
+}
+
+.ms-top-bar {
+    background-color: transparent !important;
+    height: 55px;
+    padding: 0 !important;
+
+    .top-bar-left {
+        @include breakpoint(small only) {
+            position: relative;
+            text-align: center;
+        }
+    }
+
+    &__menu {
+        background-color: transparent !important;
+        
+        a {
+            color: $color-white-primary;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $color-yellow;
+            }
+        }
+
+        a.ms-btn {
+            font-size: 14px;
+            padding: 9px 12px;
+        }
+    }
+}
