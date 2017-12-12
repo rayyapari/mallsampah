@@ -63,9 +63,8 @@
 .ms-section__services,
 .ms-section__gogreen,
 .ms-section__our-hero,
-.ms-section__gogreen,
-.ms-section__zerowaste {
-    padding: 25px 0;    
+.ms-section__gogreen {
+    padding: 25px 0;
 }
 
 .ms-section__services {    
@@ -282,17 +281,105 @@
 }
 
 .ms-section__zerowaste {
+    padding: 50px 0;
+    color: $color-black-secondary;
+
     .zerowaste {
         &__title {
             font-size: $font-size-headline;
-            color: $color-black-secondary;
         }
 
         &__desc {
             font-size: $font-size-subheading;
-            color: $color-black-secondary;
             margin: 25px 0;
         }
     }
 }
 /* end of Frontpage */
+
+/* Zero Waste */
+.ms-section__zerowaste-front {
+    .zerowaste-front__title {
+        color: $color-white-primary;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .zerowaste__category--wrapper {
+        position: relative;
+        text-align: center;
+        height: 650px;
+
+        @include breakpoint(medium down) {
+            height: 500px;
+        }
+
+        .zerowaste__category {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .zerowaste--left {
+        background: {
+            image: url('https://placehold.it/1200x1000/888?text=Image-1');
+            size: cover;
+            position: center center;
+            repeat: no-repeat;
+        }
+    }
+
+    .zerowaste--right {
+        background: {
+            image: url('https://placehold.it/1200x1000/777?text=Image-2');
+            size: cover;
+            position: center center;
+            repeat: no-repeat;
+        }
+    }
+
+    .zerowaste__title {
+        color: $color-white-primary;
+        font-size: $font-size-display-1;
+    }
+
+    .zerowaste__pricelist--wrapper {
+        width: 350px;
+        background: rgba(255, 255, 255, 0.8);
+        margin: 15px auto 0;
+        padding: 25px;
+        color: $color-black-secondary;
+
+        @include breakpoint(medium down) {
+            width: 100%;
+        }
+
+        .zerowaste__price {
+            font-size: $font-size-display-1;
+            
+            small {
+                color: $color-black-secondary;
+                font-size: $font-size-subheading;
+            }
+
+            &-label {
+                font-size: $font-size-body;
+            }
+        }
+
+        .ms-btn {
+            margin: 20px 0;
+            width: 200px;
+        }
+
+        .zerowaste__variant-label {
+            font-size: $font-size-body;
+            margin-bottom: 5px;
+        }
+    }
+}
+/* end of Zero Waste */
