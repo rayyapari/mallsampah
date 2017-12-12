@@ -12,39 +12,39 @@ meta-description: Isi Meta Description Disini
                 <h1 class="ms-no-margin ms-form__title">Formulir Zero Waste Home</h1>
     
                 <div class="ms-form__container">
-                    <p class="ms-form__desc">
+                    <p class="ms-no-margin ms-form__desc">
                         Lengkapi data Anda/Perusahaan Anda untuk memulai layanan Zero Waste dari Mallsampah
                         dan dapatkan paket yang lebih ekonomis sesuai dengan paket yang tersedia.
                     </p>
     
                     <form class="ms-form">
-                        <div class="grid-x">
+                        <div class="grid-x ms-form__group">
                             <div class="medium-4 cell">
-                                <label class="ms-label middle" for="nama">Name</label>
+                                <label class="ms-label" for="nama">Nama</label>
                             </div>
                             <div class="medium-8 cell">
                                 <input id="nama" type="text" class="ms-input ms-input--medium" />
                             </div>
                         </div>
-                        <div class="grid-x">
+                        <div class="grid-x ms-form__group">
                             <div class="medium-4 cell">
-                                <label class="ms-label middle" for="provinsi">Lokasi</label>
+                                <label class="ms-label" for="provinsi">Lokasi</label>
                             </div>
                             <div class="medium-8 cell">
-                                <div class="grid-x grid-margin-x">
-                                    <div class="medium-4 cell">
+                                <div class="grid-x grid-margin-x ms-form__location--wrapper">
+                                    <div class="medium-4 cell ms-form__location">
                                         <select id="provinsi" name="provinsi" id="provinsi" class="ms-select ms-select--medium">
                                             <option value="" disabled="">Provinsi</option>
                                             <option value="">Sulawesi Selatan</option>
                                         </select>
                                     </div>
-                                    <div class="medium-4 cell">
+                                    <div class="medium-4 cell ms-form__location">
                                         <select name="kota" id="kota" class="ms-select ms-select--medium">
                                             <option value="" disabled>Kabupaten/Kota</option>
                                             <option value="">Makassar</option>
                                         </select>
                                     </div>
-                                    <div class="medium-4 cell">
+                                    <div class="medium-4 cell ms-form__location">
                                         <select name="kecamatan" id="kecamatan" class="ms-select ms-select--medium">
                                             <option value="" disabled>Kecamatan</option>
                                             <option value="">Tamalate</option>
@@ -54,54 +54,93 @@ meta-description: Isi Meta Description Disini
                             </div>
                         </div>
 
-                        <div class="grid-x">
+                        <div class="grid-x ms-form__group">
                             <div class="medium-4 cell">
-                                <label class="ms-label middle" for="alamat">Alamat Lengkap</label>
+                                <label class="ms-label ms-label--textarea" for="alamat">Alamat Lengkap</label>
                             </div>
                             <div class="medium-8 cell">
                                 <textarea name="alamat" id="alamat" class="ms-textarea ms-textarea--medium"></textarea>
                             </div>
                         </div>
 
-                        <div class="grid-x">
+                        <div class="grid-x ms-form__group">
                             <div class="medium-4 cell">
-                                <label class="ms-label middle" for="kode-pos">Kode Pos</label>
+                                <label class="ms-label" for="kode-pos">Kode Pos</label>
                             </div>
                             <div class="medium-8 cell">
                                 <input id="kode-pos" type="text" class="ms-input ms-input--medium" />
                             </div>
                         </div>
 
-                        <div class="grid-x">
+                        <div class="grid-x ms-form__group">
                             <div class="medium-4 cell">
-                                <label class="ms-label middle" for="no-hp">Nomor Hp</label>
+                                <label class="ms-label" for="no-hp">Nomor Hp</label>
                             </div>
                             <div class="medium-8 cell">
-                                <div class="input-group">
-                                    <span class="input-group-label">+62</span>
-                                    <input id="no-hp" class="input-group-field" type="number">
+                                <div class="input-group ms-input-group">
+                                    <span class="input-group-label ms-input-group__label">+62</span>
+                                    <input id="no-hp" class="input-group-field ms-input-group__field" type="number">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid-x">
+                        <div class="grid-x ms-form__group">
                             <div class="medium-4 cell">
-                                <label class="ms-label middle" for="email">Email</label>
+                                <label class="ms-label" for="email">Email</label>
                             </div>
                             <div class="medium-8 cell">
                                 <input id="email" type="text" class="ms-input ms-input--medium" />
                             </div>
                         </div>
 
-                        <div class="grid-x">
+                        <div class="grid-x ms-form__group">
                             <div class="medium-4 cell">
-                                <label class="ms-label middle" for="paket">Pilih Paket</label>
+                                <label class="ms-label" for="paket">Pilih Paket</label>
                             </div>
                             <div class="medium-8 cell">
-                                <input type="radio" name="paket" value="" id="paket-satu" required><label for="paket-satu">1 Bulan</label>
-                                <input type="radio" name="paket" value="" id="paket-dua"><label for="paket-dua">3 Bulan</label>
-                                <input type="radio" name="paket" value="" id="paket-tiga"><label for="paket-tiga">6 Bulan</label>
-                                <input type="radio" name="paket" value="" id="paket-empat"><label for="paket-empat">1 Tahun</label>
+
+                                <div class="ms-radio-custom">
+                                    <input type="radio" name="paket" value="" id="paket-satu" required>
+                                    <label for="paket-satu" class="ms-label-radio">
+                                        <div class="ms-radio-dot"></div>
+                                        1 Bulan
+                                    </label>
+                                    
+                                    <input type="radio" name="paket" value="" id="paket-dua">
+                                    <label for="paket-dua" class="ms-label-radio">
+                                        <div class="ms-radio-dot"></div>                                            
+                                        3 Bulan
+                                    </label>
+                                    
+                                    <input type="radio" name="paket" value="" id="paket-tiga">
+                                    <label for="paket-tiga" class="ms-label-radio">
+                                        <div class="ms-radio-dot"></div>                                            
+                                        6 Bulan
+                                    </label>
+
+                                    <input type="radio" name="paket" value="" id="paket-empat">
+                                    <label for="paket-empat" class="ms-label-radio">
+                                        <div class="ms-radio-dot"></div>                                            
+                                        1 Tahun
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="grid-x ms-form__group">
+                            <div class="medium-4 cell"></div>
+                            <div class="medium-8 cell">
+                                <div class="grid-x">
+                                    <div class="medium-7 cell ms-form__amount--wrapper">
+                                        <p class="ms-no-margin ms-form__amount-content">
+                                            Total Pembayaran
+                                            <br />
+                                            <span class="ms-form__amount-val">Rp 94.000</span>
+                                        </p>
+                                        <small>*Dapatkan harga lebih murah dengan paket lebih lama</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

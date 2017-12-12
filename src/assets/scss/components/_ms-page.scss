@@ -88,14 +88,14 @@
 
         &__title {
             font-size: $font-size-headline;
-            color: $color-black-secondary;
+            color: $color-black-primary;
             margin-bottom: 35px;
         }
 
         &__feature {
             display: block;
             font-size: $font-size-title;
-            color: $color-black-secondary;
+            color: $color-black-primary;
         }
     }
 }
@@ -104,7 +104,7 @@
     .our-hero {
         &__title {
             font-size: $font-size-headline;
-            color: $color-black-secondary;
+            color: $color-black-primary;
             margin-bottom: 35px;
         }
 
@@ -179,7 +179,7 @@
         &__campaign {
             &--wrapper {
                 margin-top: 35px !important;
-                color: $color-black-secondary;                
+                color: $color-black-primary;                
 
                 .campaign__title {
                     font-size: $font-size-title;
@@ -199,7 +199,7 @@
     .gogreen {
         &__title {
             font-size: $font-size-headline;
-            color: $color-black-secondary;
+            color: $color-black-primary;
             margin-bottom: 35px;
         }
 
@@ -281,8 +281,8 @@
 }
 
 .ms-section__zerowaste {
-    padding: 50px 0;
-    color: $color-black-secondary;
+    padding: 100px 0;
+    color: $color-black-primary;
     background: {
         image: url('../img/bg-zero-waste_mallsampah.png');
         size: contain;
@@ -291,6 +291,7 @@
     }
 
     @include breakpoint(medium down) {
+        padding: 50px 0;
         background: none;
         text-align: center;
     }
@@ -367,7 +368,7 @@
         background: rgba(255, 255, 255, 0.8);
         margin: 15px auto 0;
         padding: 25px;
-        color: $color-black-secondary;
+        color: $color-black-primary;
 
         @include breakpoint(medium down) {
             width: 100%;
@@ -377,7 +378,7 @@
             font-size: $font-size-display-1;
             
             small {
-                color: $color-black-secondary;
+                color: $color-black-primary;
                 font-size: $font-size-subheading;
             }
 
@@ -400,7 +401,41 @@
 
 .ms-form__zerowaste--wrapper {
     padding: 35px 0;
-    color: $color-black-secondary;
+    color: $color-black-primary;
+
+    .ms-form__location--wrapper {
+        .ms-form__location:nth-child(2) {
+            @include breakpoint(small only) {
+                margin: 15px auto;
+            }
+        }
+    }
+
+    .ms-form {
+        margin-top: 25px;
+
+        &__amount--wrapper {
+            padding: 25px;
+            background-color: $color-green-lighten;
+            color: $color-white-primary;
+
+            @include breakpoint(small only) {
+                margin-top: 100px;
+            }
+
+            small {
+                font-size: 13px;
+            }
+        }
+
+        &__amount-content {
+            font-size: $font-size-subheading;
+        }
+
+        &__amount-val {
+            font-size: $font-size-display-1;
+        }
+    }
 
     .ms-form__title {
         font-size: $font-size-title;
@@ -409,6 +444,10 @@
     .ms-form__container {
         padding: 0 50px;
         margin-top: 25px;
+
+        @include breakpoint(small only) {
+            padding: 0;
+        }
 
         .ms-form__desc {
             font-size: $font-size-subheading;
