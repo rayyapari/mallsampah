@@ -10,19 +10,19 @@
 
 .slick-dots li button:before {
     font-size: 12px !important;
-    color: $color-yellow !important;
+    color: $color-blue !important;
     opacity: 0.3 !important;
 }
 
 .slick-dots li.slick-active button:before {
-    color: $color-yellow !important;
+    color: $color-blue !important;
     opacity: 1 !important;
 }
 
 .slick-arrow {
     height: 35px !important;
     width: 35px !important;
-    background-color: $color-yellow !important;
+    background-color: $color-blue !important;
     border-radius: 999px !important;
     z-index: 2;
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
@@ -54,7 +54,7 @@
 .slick-prev,
 .slick-next {
     &:hover {
-        background-color: lighten($color-yellow, 10%) !important;
+        background-color: lighten($color-blue, 10%) !important;
     }
 }
 /* end of Recharge Plugins *?
@@ -126,10 +126,10 @@
                 position: absolute;
                 bottom: 40px;
                 display: block;
-                background: #c1f200;
-                background: -moz-linear-gradient(45deg, #c1f200 0%, #009ec3 100%);
-                background: -webkit-linear-gradient(45deg, #c1f200 0%,#009ec3 100%);
-                background: linear-gradient(45deg, #c1f200 0%,#009ec3 100%);
+                background: #003F60;
+                background: -moz-linear-gradient(#003F60 0%, #148E11 100%);
+                background: -webkit-linear-gradient(#003F60 0%,#148E11 100%);
+                background: linear-gradient(#003F60 0%,#148E11 100%);
                 opacity: 0.5;
                 height: calc(100% - 40px);
                 width: 100%;
@@ -215,7 +215,7 @@
                 opacity: 0;
                 height: 100%;
                 width: 100%;
-                background: linear-gradient(45deg, #c1f200 0%, #009ec3 100%);
+                background: linear-gradient(#003F60 0%, #148E11 100%);
                 transition: opacity 0.3s ease, visibility 0.3s ease;
             }
 
@@ -275,7 +275,7 @@
             color: $color-white-primary;
             padding: 15px 10px;
             margin: 0;
-            font-size: $font-size-subheading;
+            font-size: $font-size-title;
         }
     }
 }
@@ -283,15 +283,30 @@
 .ms-section__zerowaste {
     padding: 50px 0;
     color: $color-black-secondary;
+    background: {
+        image: url('../img/bg-zero-waste_mallsampah.png');
+        size: contain;
+        repeat: no-repeat;
+        position: right;
+    }
+
+    @include breakpoint(medium down) {
+        background: none;
+        text-align: center;
+    }
 
     .zerowaste {
         &__title {
-            font-size: $font-size-headline;
+            font-size: $font-size-display-1;
+
+            @include breakpoint(medium down) {
+                font-size: $font-size-headline;            
+            }
         }
 
         &__desc {
-            font-size: $font-size-subheading;
-            margin: 25px 0;
+            font-size: $font-size-title;
+            margin: 35px 0;
         }
     }
 }
@@ -326,7 +341,7 @@
     }
     .zerowaste--left {
         background: {
-            image: url('https://placehold.it/1200x1000/888?text=Image-1');
+            image: url('../img/bg-zerowaste-home_mallsampah.png');
             size: cover;
             position: center center;
             repeat: no-repeat;
@@ -335,7 +350,7 @@
 
     .zerowaste--right {
         background: {
-            image: url('https://placehold.it/1200x1000/777?text=Image-2');
+            image: url('../img/bg-zerowaste-office_mallsampah.png');
             size: cover;
             position: center center;
             repeat: no-repeat;
@@ -379,6 +394,24 @@
         .zerowaste__variant-label {
             font-size: $font-size-body;
             margin-bottom: 5px;
+        }
+    }
+}
+
+.ms-form__zerowaste--wrapper {
+    padding: 35px 0;
+    color: $color-black-secondary;
+
+    .ms-form__title {
+        font-size: $font-size-title;
+    }
+
+    .ms-form__container {
+        padding: 0 50px;
+        margin-top: 25px;
+
+        .ms-form__desc {
+            font-size: $font-size-subheading;
         }
     }
 }
