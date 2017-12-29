@@ -12,6 +12,15 @@ meta-description: Isi Meta Description Disini
                 <h1 class="ms-no-margin ms-form__title">Formulir Zero Waste Home</h1>
     
                 <div class="ms-form__container">
+                    <div class="ms-notif ms-notif__callout ms-notif__callout--large ms-notif__callout--error" data-closable="fade-out">
+                        <div class="callout-body">
+                            <p class="ms-no-margin callout-desc">
+                                Mohon cek email masuk atau spam, untuk mengaktifkan akun Anda.
+                                Jika belum menerima email aktivasi, silahkan <a class="callout-link" href="#"><strong>klik disini</strong></a> untuk mengirim ulang email aktivasi.
+                            </p>
+                        </div>
+                    </div>
+                    
                     <p class="ms-no-margin ms-form__desc">
                         Lengkapi data Anda/Perusahaan Anda untuk memulai layanan Zero Waste dari Mallsampah
                         dan dapatkan paket yang lebih ekonomis sesuai dengan paket yang tersedia.
@@ -23,7 +32,8 @@ meta-description: Isi Meta Description Disini
                                 <label class="ms-label" for="nama">Nama</label>
                             </div>
                             <div class="medium-8 cell">
-                                <input id="nama" type="text" class="ms-input ms-input--medium" />
+                                <input id="nama" type="text" class="ms-input ms-input--medium ms-input--error" />
+                                <small class="ms-label--error">Nama harus diisi</small>
                             </div>
                         </div>
                         <div class="grid-x ms-form__group">
@@ -32,19 +42,19 @@ meta-description: Isi Meta Description Disini
                             </div>
                             <div class="medium-8 cell">
                                 <div class="grid-x grid-margin-x ms-form__location--wrapper">
-                                    <div class="medium-4 cell ms-form__location">
+                                    <div class="small-12 medium-auto cell ms-form__location">
                                         <select id="provinsi" name="provinsi" id="provinsi" class="ms-select ms-select--medium">
                                             <option value="" disabled="">Provinsi</option>
                                             <option value="">Sulawesi Selatan</option>
                                         </select>
                                     </div>
-                                    <div class="medium-4 cell ms-form__location">
+                                    <div class="small-12 medium-auto cell ms-form__location">
                                         <select name="kota" id="kota" class="ms-select ms-select--medium">
                                             <option value="" disabled>Kabupaten/Kota</option>
                                             <option value="">Makassar</option>
                                         </select>
                                     </div>
-                                    <div class="medium-4 cell ms-form__location">
+                                    <div class="small-12 medium-auto cell ms-form__location">
                                         <select name="kecamatan" id="kecamatan" class="ms-select ms-select--medium">
                                             <option value="" disabled>Kecamatan</option>
                                             <option value="">Tamalate</option>

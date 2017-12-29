@@ -42,8 +42,8 @@
         transition: border-color 0.3s ease, background-color 0.3s ease;
 
         &:hover {
-            border-color: lighten($color-yellow, 10%);
-            background-color: lighten($color-yellow, 10%);
+            border-color: darken($color-yellow, 7%);
+            background-color: darken($color-yellow, 7%);
         }
     }
 
@@ -54,8 +54,46 @@
         transition: border-color 0.3s ease, background-color 0.3s ease;
 
         &:hover {
-            border-color: lighten($color-blue, 10%);
-            background-color: lighten($color-blue, 10%);
+            border-color: darken($color-blue, 7%);
+            background-color: darken($color-blue, 7%);
+        }
+    }
+
+    &__facebook {
+        border-color: #3B5998;
+        background-color: #3B5998;
+        color: #FFFFFF;
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            border-color: darken(#3B5998, 7%);
+            background-color: darken(#3B5998, 7%);
+            color: #FFFFFF !important;            
+        }
+
+        i {
+            font-size: 22px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    }
+
+    &__google {
+        border-color: #DB4437;
+        background-color: #DB4437;
+        color: #FFFFFF;
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            border-color: darken(#DB4437, 7%);
+            background-color: darken(#DB4437, 7%);
+            color: #FFFFFF !important;            
+        }
+
+        i {
+            font-size: 20px;
+            margin-right: 10px;
+            vertical-align: middle;
         }
     }
 }

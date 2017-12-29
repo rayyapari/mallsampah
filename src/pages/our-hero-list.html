@@ -1,0 +1,63 @@
+---
+layout: mallsampah
+title: Our Hero List
+meta-title: Isi Meta Title Disini
+meta-description: Isi Meta Description Disini
+---
+
+<div class="ms-content">
+    {{> search-filter-new}}
+
+    <section class="ms-section__search">
+        <div class="grid-container fluid ms-grid-container">
+            <div class="grid-x">
+                <h1 class="ms-no-margin search-list__title"><strong>Pengepul #JualSampah</strong></h1>
+            </div>
+            <div class="grid-x grid-padding-x small-up-1 medium-up-3 large-up-4 search-list__container">
+                {{#repeat 12}}
+                <div class="cell">
+                    <div class="our-hero__card__container">
+                        <div class="our-hero__card">
+                            <img class="our-hero__img" src="https://www.mallsampah.com/upload/img-pengepul-logo/thumb/dedi2817223701001-mallsampah-pengepul.JPG" alt="">
+                            <div class="our-hero__profile">
+                                <span>Daeng Bakri</span>
+                                <p class="ms-truncate ms-no-margin">Setiabudi, Jakarta Selatan, Indonesia</p>
+                                <ul class="menu our-hero__rate clearfix">
+                                    <li><img src="https://www.mallsampah.com/assets/img/icons/leaf-gold.png" width="15" alt=""></li>
+                                    <li><img src="https://www.mallsampah.com/assets/img/icons/leaf-gold.png" width="15" alt=""></li>
+                                    <li><img src="https://www.mallsampah.com/assets/img/icons/leaf-gold.png" width="15" alt=""></li>
+                                    <li><img src="https://www.mallsampah.com/assets/img/icons/leaf-gold.png" width="15" alt=""></li>
+                                    <li><img src="https://www.mallsampah.com/assets/img/icons/leaf-grey.png" width="15" alt=""></li>
+                                    <div class="our-hero__state">
+                                        <img src="https://www.mallsampah.com/assets/img/icons/icon-trust.png" width="15" alt="">
+                                    </div>
+                                </ul>
+                            </div>
+                            <a class="ms-btn ms-btn--medium ms-btn--blue" href="#">Hubungi</a>
+                        </div>
+                    </div>
+                </div>
+                {{/repeat}}
+            </div>
+
+            <div class="grid-x">
+                <div class="medium-6 cell">
+                    <p class="ms-no-margin ms-pagination__label"><strong>Total Produk 427</strong></p>
+                </div>
+                <div class="medium-6 cell">
+                    <ul class="ms-no-margin pagination ms-pagination" role="navigation" aria-label="Pagination">
+                        <li class="pagination-previous disabled">Previous</li>
+                        <li><a href="#" aria-label="Page 1">1</a></li>
+                        <li class="current">2</li>
+                        <li><a href="#" aria-label="Page 3">3</a></li>
+                        <li class="ellipsis"></li>
+                        <li><a href="#" aria-label="Page 12">12</a></li>
+                        <li><a href="#" aria-label="Page 13">13</a></li>
+                        <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{> search-cta}}
+</div>

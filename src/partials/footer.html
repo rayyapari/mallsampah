@@ -5,7 +5,7 @@
                 <div class="small-12 medium-8 cell ms-centered footer__content">
                     <label for="email-subscribe">Dapatkan Informasi Terbaru Dari Kami</label>
                     <input type="text" class="ms-input ms-input--small" id="email-subscribe" name="email-subscribe" placeholder="Email">
-                    <button type="button" class="ms-btn ms-btn--rounded ms-btn--small ms-btn--yellow">Subscribe</button>
+                    <button type="button" class="ms-btn ms-btn--rounded ms-btn--small ms-btn--yellow" data-open="modalRegister">Subscribe</button>
                 </div>
             </div>
         </div>
@@ -55,6 +55,7 @@
                             <li><a target="_blank" href="https://www.facebook.com/Mallsampah/?ref=br_rs"><i class="fa fa-facebook"></i></a></li>
                             <li><a target="_blank" href="https://twitter.com/mallsampah"><i class="fa fa-twitter"></i></a></li>
                             <li><a target="_blank" href="https://www.instagram.com/mallsampah/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li>                            
                         </ul>
                     </div>
                 </div>
@@ -67,3 +68,42 @@
         </div>
     </div>
 </footer>
+
+<div class="tiny reveal ms-reveal" id="modalSubscribe" data-reveal data-animation-in="slide-in-down fast" data-animation-out="slide-out-up fast">
+    <div class="ms-reveal__header">
+        <p class="ms-no-margin ms-reveal__title">Informasi</p>
+        <button class="close-button ms-reveal__btn--close" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="ms-reveal__body">
+        <p class="ms-no-margin ms-reveal__desc">
+            Terima kasih telah berlangganan dengan Mallsampah
+        </p>
+    </div>
+    <div class="ms-reveal__footer show-for-small-only">
+        <button class="ms-btn ms-btn--medium ms-btn--blue" data-close>Tutup</button>
+    </div>
+</div>
+
+<div class="full reveal ms-reveal ms-reveal--secondary" id="modalRegister" data-reveal data-animation-in="fade-in fast" data-animation-out="fade-out fast">
+    <button class="close-button ms-reveal__btn--close" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+
+    <div class="ms-reveal__body text-center">
+
+        <img class="ms-reveal__img" src="https://www.mallsampah.com/assets/img/logo-green_mallsampah.png" alt="Logo MallSampah" width="250">
+        <p class="ms-no-margin ms-reveal__desc--primary">
+            <strong>
+                Terima kasih telah melakukan pendaftaran.
+                Data Anda selanjutnya akan di proses oleh admin.
+            </strong>
+        </p>
+        <br />
+        <div class="ms-no-margin ms-reveal__desc--secondary">
+            Anda akan mendapatkan persetujuan selanjutnya melalui email dan telepon dari admin
+            jika data yang Anda masukkan telah disetujui.
+        </div>
+    </div>
+</div>

@@ -1,0 +1,173 @@
+---
+layout: mallsampah
+title: Setting Shop
+meta-title: Isi Meta Title Disini
+meta-description: Isi Meta Description Disini
+---
+
+<div class="ms-content">
+    <section class="ms-setting__shop">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x setting-shop__info--wrapper">
+                <div class="medium-2 cell">
+                    <img class="setting-shop__avatar" src="https://placehold.it/150x150/CCC" alt="" width="150">
+                </div>
+                <div class="medium-10 cell">
+                    <h1 class="ms-no-margin setting-shop__name"><strong>Toko Love Bundacu</strong></h1>
+                    <p class="setting-shop__address">
+                        Jalan Monumen Emmy Saelan Kompleks Graha Sari
+                        <br />
+                        Makassar, Sulawesi Selatan
+                    </p>
+
+                    <ul class="tabs ms-tabs" data-tabs id="setting-shop">
+                        <li class="tabs-title is-active"><a href="#profil-shop" aria-selected="true">Profil Toko</a></li>
+                        <li class="tabs-title"><a data-tabs-target="product" href="#product">Produk</a></li>                                
+                        <li class="tabs-title"><a data-tabs-target="setting" href="#setting">Pengaturan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid-x grid-padding-x">
+                <div class="medium-12 cell">
+
+                    <div class="tabs-content ms-tabs-content" data-tabs-content="setting-shop">
+                        <div class="tabs-panel is-active tabs-shop__content" id="profil-shop">
+                            <h2 class="tabs-shop__title"><strong>Profil Toko</strong></h2>
+                            <div class="grid-x ms-form__group--small tabs-shop__form-group">
+                                <div class="medium-3 cell tabs-shop__form-label">Nama Toko</div>
+                                <div class="medium-9 cell tabs-shop__form-val">Love Bundacu</div>
+                            </div>
+                            <div class="grid-x ms-form__group--small tabs-shop__form-group">
+                                <div class="medium-3 cell tabs-shop__form-label">Slogan</div>
+                                <div class="medium-9 cell tabs-shop__form-val">Berani kotor itu baik</div>
+                            </div>
+                            <div class="grid-x ms-form__group--small tabs-shop__form-group">
+                                <div class="medium-3 cell tabs-shop__form-label">Deskripsi</div>
+                                <div class="medium-9 cell tabs-shop__form-val">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci consectetur minima non laboriosam explicabo mollitia perspiciatis labore esse voluptatibus velit! Deserunt atque culpa corrupti ea quaerat blanditiis facilis vitae accusantium! </div>
+                            </div>
+                            <div class="grid-x ms-form__group--small tabs-shop__form-group">
+                                <div class="medium-3 cell tabs-shop__form-label">Nomor Hp</div>
+                                <div class="medium-9 cell tabs-shop__form-val">0123456789</div>
+                            </div>
+                            <div class="grid-x ms-form__group--small tabs-shop__form-group">
+                                <div class="medium-3 cell tabs-shop__form-label">Alamat Lengkap</div>
+                                <div class="medium-9 cell tabs-shop__form-val">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, aliquam?</div>
+                            </div>
+                            <div class="grid-x ms-form__group--small tabs-shop__form-group">
+                                <div class="medium-3 cell tabs-shop__form-label">Kota/Provinsi</div>
+                                <div class="medium-9 cell tabs-shop__form-val">Makassar/Sulawesi Selatan</div>
+                            </div>
+                        </div>
+                        <div class="tabs-panel tabs-shop__content" id="product">
+                            <div class="grid-x">
+                                <div class="medium-auto cell"></div>
+                                <div class="medium-3 cell">
+                                    <button class="ms-btn ms-btn--medium ms-btn--blue">Tambah Produk</button>
+                                </div>
+                            </div>
+
+                            <div class="grid-x">
+                                <div class="medium-12 cell tabs-shop-form__add">
+                                    <h3 class="tabs-shop__title"><strong>Produk</strong></h3>
+
+                                    <div class="grid-x ms-form__group">
+                                        <div class="medium-4 cell">
+                                            <label class="ms-label" for="jenis-produk">Jenis Produk</label>
+                                        </div>
+                                        <div class="medium-8 cell">
+                                            <div class="ms-radio-custom">
+                                                <input type="radio" name="jenis-produk" value="" id="daur-ulang" required>
+                                                <label for="daur-ulang" class="ms-label-radio">
+                                                    <div class="ms-radio-dot"></div>
+                                                    Daur Ulang
+                                                </label>
+                                                
+                                                <input type="radio" name="jenis-produk" value="" id="ramah-lingkungan">
+                                                <label for="ramah-lingkungan" class="ms-label-radio">
+                                                    <div class="ms-radio-dot"></div>                                            
+                                                    Ramah Lingkungan
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid-x ms-form__group">
+                                        <div class="medium-4 cell">
+                                            <label class="ms-label" for="kategori">Kategori Produk</label>
+                                        </div>
+                                        <div class="medium-8 cell">
+                                            <select name="kategori" id="kategori" class="ms-select ms-select--medium">
+                                                <option value="" disabled selected="true">Pilih Kategori</option>
+                                                <option value="">Satu</option>
+                                                <option value="">Dua</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid-x ms-form__group">
+                                        <div class="medium-4 cell">
+                                            <label class="ms-label" for="nama-produk">Nama Produk</label>
+                                        </div>
+                                        <div class="medium-8 cell">
+                                            <input id="nama-produk" type="text" class="ms-input ms-input--medium" />
+                                        </div>
+                                    </div>
+
+                                    <div class="grid-x ms-form__group">
+                                        <div class="medium-4 cell">
+                                            <label class="ms-label ms-label--textarea" for="deskripsi">Deskripsi Produk</label>
+                                        </div>
+                                        <div class="medium-8 cell">
+                                            <textarea name="deskripsi" id="deskripsi" class="ms-textarea ms-textarea--medium"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid-x ms-form__group">
+                                        <div class="medium-4 cell">
+                                            <label class="ms-label" for="jumlah-produk">Jumlah Produk</label>
+                                        </div>
+                                        <div class="medium-8 cell">
+                                            <input id="jumlah-produk" type="number" class="ms-input ms-input--medium" />
+                                        </div>
+                                    </div>
+
+                                    <div class="grid-x ms-form__group">
+                                        <div class="medium-4 cell">
+                                            <label class="ms-label" for="jenis-jual">Jenis Jual</label>
+                                        </div>
+                                        <div class="medium-8 cell">
+                                            <select name="jenis-jual" id="jenis-jual" class="ms-select ms-select--medium">
+                                                <option value="" disabled selected="true">Pilih Jenis Jual</option>
+                                                <option value="">Satuan</option>
+                                                <option value="">Grosir</option>
+                                                <option value="">Satuan & Grosir</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid-x ms-form__group">
+                                        <div class="medium-4 cell">
+                                            <label class="ms-label" for="harga">Harga</label>
+                                        </div>
+                                        <div class="medium-8 cell">
+                                            <div class="input-group ms-input-group">
+                                                <span class="input-group-label ms-input-group__label">Rp.</span>
+                                                <input id="harga" class="input-group-field ms-input-group__field" type="number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-panel tabs-shop__content" id="setting">
+                            ray
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

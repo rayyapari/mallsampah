@@ -1,0 +1,246 @@
+---
+layout: mallsampah
+title: Setting Account Form
+meta-title: Isi Meta Title Disini
+meta-description: Isi Meta Description Disini
+---
+
+<div class="ms-content">
+    <div class="ms-form__zerowaste--wrapper">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="medium-12 cell">
+                    <h1 class="ms-no-margin ms-form__title"><strong>Data Pribadi</strong></h1>
+                </div>
+                <div class="medium-12 cell">
+                    <div class="ms-form__container">
+                        <p class="ms-no-margin ms-form__desc">
+                            Ubah atau lengkapi data untuk keamanan akun Anda.
+                        </p>
+        
+                        <form class="ms-form">
+                            <div class="ms-form__group--wrapper">
+                                <h1 class="ms-form__subtitle"><strong>Info Biodata Pengguna</strong></h1>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-4 cell">
+                                        <label class="ms-label" for="user-name">Nama</label>
+                                    </div>
+                                    <div class="medium-8 cell">
+                                        <input id="user-name" type="text" class="ms-input ms-input--medium ms-input--error" />
+                                        <small class="ms-label--error">Nama harus diisi</small>
+                                    </div>
+                                </div>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-4 cell">
+                                        <label class="ms-label" for="birth-date">Tanggal Lahir</label>
+                                    </div>
+                                    <div class="medium-8 cell">
+                                        <div class="grid-x grid-margin-x ms-form__location--wrapper">
+                                            <div class="small-12 medium-auto cell ms-form__location">
+                                                <select name="birth-date" id="birth-date" class="ms-select ms-select--medium">
+                                                    <option value="" disabled selected="true">Tanggal</option>
+                                                    <option value="">1</option>
+                                                </select>
+                                            </div>
+                                            <div class="small-12 medium-auto cell ms-form__location">
+                                                <select name="birth-month" id="birth-month" class="ms-select ms-select--medium">
+                                                    <option value="" disabled selected="true">Bulan</option>
+                                                    <option value="">Januari</option>
+                                                </select>
+                                            </div>
+                                            <div class="small-12 medium-auto cell ms-form__location">
+                                                <select name="birth-year" id="birth-year" class="ms-select ms-select--medium">
+                                                    <option value="" disabled selected="true">Tahun</option>
+                                                    <option value="">1991</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-4 cell">
+                                        <label class="ms-label" for="jenis-kelamin">Jenis Kelamin</label>
+                                    </div>
+                                    <div class="medium-8 cell">
+                                        <div class="ms-radio-custom">
+                                            <input type="radio" name="jenis-kelamin" value="" id="laki-laki" required>
+                                            <label for="laki-laki" class="ms-label-radio">
+                                                <div class="ms-radio-dot"></div>
+                                                Laki-laki
+                                            </label>
+                                            
+                                            <input type="radio" name="jenis-kelamin" value="" id="perempuan">
+                                            <label for="perempuan" class="ms-label-radio">
+                                                <div class="ms-radio-dot"></div>                                            
+                                                Perempuan
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-4 cell">
+                                        <label class="ms-label" for="no-identitas">No KTP/SIM/Passport</label>
+                                    </div>
+                                    <div class="medium-8 cell">
+                                        <input id="nama" type="text" class="ms-input ms-input--medium" />
+                                    </div>
+                                </div>
+
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-4 cell">
+                                        <label class="ms-label" for="foto-identitas">Foto KTP/SIM/Passport</label>
+                                    </div>
+                                    <div class="medium-8 cell">
+                                        <div class="text-center ms-img-upload__container">
+                                            <p class="ms-no-margin">Klik untuk<br />unggah gambar</p>
+                                            <i class="fa fa-image"></i>
+                                            <p class="ms-no-margin">
+                                                JPG, JPEG, PNG
+                                                <br />
+                                                Max 2Mb
+                                            </p>
+                                            <input class="ms-no-margin ms-input__file" type="file" set-to="img-ktp" />
+                                            <img id="img-ktp" class="ms-img-upload" src="#" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-4 cell">
+                                        <label class="ms-label" for="foto-profil">Foto Profil</label>
+                                    </div>
+                                    <div class="medium-8 cell">
+                                        <div class="text-center ms-img-upload__container">
+                                            <p class="ms-no-margin">Klik untuk<br />unggah gambar</p>
+                                            <i class="fa fa-image"></i>
+                                            <p class="ms-no-margin">
+                                                JPG, JPEG, PNG
+                                                <br />
+                                                Max 2Mb
+                                            </p>
+                                            <input class="ms-no-margin ms-input__file" type="file" set-to="img-profile" />
+                                            <img id="img-profile" class="ms-img-upload" src="#" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="ms-form__group--wrapper">
+                                <h2 class="ms-form__subtitle"><strong>Info Kontak</strong></h2>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-4 cell">
+                                        <label class="ms-label" for="no-identitas">Email</label>
+                                    </div>
+                                    <div class="medium-8 cell">
+                                        <span class="ms-label--disabled">ayah.andri.chayank.bunda@gmail.com</span>
+                                        <a class="ms-label__cta-modal" data-open="editEmail">Ubah Email</a>
+                                    </div>
+                                </div>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-4 cell">
+                                        <label class="ms-label" for="no-hp">Nomor Hp</label>
+                                    </div>
+                                    <div class="medium-8 cell">
+                                        <div class="input-group ms-input-group">
+                                            <span class="input-group-label ms-input-group__label">+62</span>
+                                            <input id="no-hp" class="input-group-field ms-input-group__field" type="number">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ms-form__group--wrapper">
+                                <h3 class="ms-form__subtitle"><strong>Info Kata Sandi</strong></h3>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-4 cell">
+                                        <label class="ms-label" for="kata-sandi">Kata Sandi</label>
+                                    </div>
+                                    <div class="medium-8 cell">
+                                        <a class="ms-label__cta-modal" data-open="editPassword">Ubah Kata Sandi</a>
+                                    </div>
+                                </div>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-4 cell">
+                                    </div>
+                                    <div class="medium-2 cell">
+                                        <button class="ms-btn ms-btn--medium ms-btn--blue">Simpan</button>
+                                    </div>
+                                    <div class="auto cell"></div>
+                                </div>
+                            </div>
+                        </form>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="reveal ms-reveal ms-reveal--tiny" id="editEmail" data-reveal data-animation-in="slide-in-down fast" data-animation-out="slide-out-up fast">
+    <div class="ms-reveal__header">
+        <p class="ms-no-margin ms-reveal__title">Ubah Email</p>
+        <button class="close-button ms-reveal__btn--close" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="ms-reveal__body">
+        <div class="grid-x ms-form__group ms-form__group--small">
+            <div class="medium-12 cell">
+                <label class="ms-label" for="old-email">Email Lama</label>
+                <input id="old-email" type="text" class="ms-input ms-input--medium" />
+            </div>
+        </div>
+        <div class="grid-x ms-form__group ms-form__group--small">
+            <div class="medium-12 cell">
+                <label class="ms-label" for="new-email">Email Baru</label>
+                <input id="new-email" type="text" class="ms-input ms-input--medium" />       
+            </div>
+        </div>
+        <div class="grid-x ms-form__group ms-form__group--large">
+            <div class="medium-12 cell">
+                <label class="ms-label" for="password">Kata Sandi</label>
+                <input id="password" type="password" class="ms-input ms-input--medium" />
+            </div>
+        </div>
+        <div class="grid-x ms-form__group ms-no-margin">
+            <div class="medium-12 cell">
+                <button class="ms-btn ms-btn--rounded ms-btn--medium ms-btn--blue">Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="reveal ms-reveal ms-reveal--tiny" id="editPassword" data-reveal data-animation-in="slide-in-down fast" data-animation-out="slide-out-up fast">
+        <div class="ms-reveal__header">
+            <p class="ms-no-margin ms-reveal__title">Ubah Kata Sandi</p>
+            <button class="close-button ms-reveal__btn--close" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="ms-reveal__body">
+            <div class="grid-x ms-form__group ms-form__group--small">
+                <div class="medium-12 cell">
+                    <label class="ms-label" for="old-password">Kata Sandi Lama</label>
+                    <input id="old-password" type="password" class="ms-input ms-input--medium" />
+                </div>
+            </div>
+            <div class="grid-x ms-form__group ms-form__group--small">
+                <div class="medium-12 cell">
+                    <label class="ms-label" for="new-password">Kata Sandi Baru</label>
+                    <input id="new-password" type="password" class="ms-input ms-input--medium" />       
+                </div>
+            </div>
+            <div class="grid-x ms-form__group ms-form__group--large">
+                <div class="medium-12 cell">
+                    <label class="ms-label" for="repeat-password">Ulangi Kata Sandi</label>
+                    <input id="repeat-password" type="password" class="ms-input ms-input--medium" />
+                </div>
+            </div>
+            <div class="grid-x ms-form__group ms-no-margin">
+                <div class="medium-12 cell">
+                    <button class="ms-btn ms-btn--rounded ms-btn--medium ms-btn--blue">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>

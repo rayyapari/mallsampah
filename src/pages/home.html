@@ -7,15 +7,35 @@ meta-description: Isi Meta Description Disini
 
 <div class="ms-content">
 
+    <div class="ms-loader">
+        <h1 class="ms-no-margin ms-loader__title"><strong>MallSampah</strong></h1>
+    </div>
+
+    <div class="ms-notif ms-notif__callout ms-notif__callout--small ms-notif__callout--error" data-closable="fade-out">
+        <div class="callout-header">
+            <p class="ms-no-margin callout-title"><strong>Cek Email</strong></p>
+            <button class="close-button callout-btn-close" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="callout-body">
+            <p class="ms-no-margin callout-desc">
+                Mohon cek email masuk atau spam, untuk mengaktifkan akun Anda.
+                Jika belum menerima email aktivasi, silahkan <a class="callout-link" href="#"><strong>klik disini</strong></a> untuk mengirim ulang email aktivasi.
+            </p>
+        </div>
+    </div>
+
+
     <section class="ms-section__intro">
         <div class="orbit ms-orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
             <div class="orbit-wrapper">
                 <div class="orbit-controls">
-                    <button class="orbit-previous">
+                    <button class="orbit-previous hide-for-small-only">
                         <span class="show-for-sr">Previous Slide</span>
                         <i class="fa fa-angle-left"></i>
                     </button>
-                    <button class="orbit-next">
+                    <button class="orbit-next hide-for-small-only">
                         <span class="show-for-sr">Next Slide</span>
                         <i class="fa fa-angle-right"></i>
                     </button>
@@ -23,22 +43,26 @@ meta-description: Isi Meta Description Disini
                 <ul class="orbit-container">
                     <li class="is-active orbit-slide">
                         <figure class="orbit-figure">
-                            <img class="orbit-image" src="./assets/img/banner/banner-gerakan-hijau_mallsampah.png" alt="Banner Gerakan Hijau">
+                            <img class="orbit-image hide-for-small-only" src="./assets/img/banner/banner-gerakan-hijau_mallsampah.png" alt="Banner Gerakan Hijau">
+                            <img class="show-for-small-only" src="https://placehold.it/1200x750/777?text=Gerakan-Hijau" alt="Banner Gerakan Hijau">
                         </figure>
                     </li>
                     <li class="orbit-slide">
                         <figure class="orbit-figure">
-                            <img class="orbit-image" src="./assets/img/banner/banner-jual-sampah_mallsampah.png" alt="Banner Jual Sampah">
+                            <img class="orbit-image hide-for-small-only" src="./assets/img/banner/banner-jual-sampah_mallsampah.png" alt="Banner Jual Sampah">
+                            <img class="show-for-small-only" src="https://placehold.it/1200x750/777?text=Jual-Sampah" alt="Banner Jual Sampah">                            
                         </figure>
                     </li>
                     <li class="orbit-slide">
                         <figure class="orbit-figure">
-                            <img class="orbit-image" src="./assets/img/banner/banner-produk-hijau_mallsampah.png" alt="Banner Produk Hijau">
+                            <img class="orbit-image hide-for-small-only" src="./assets/img/banner/banner-produk-hijau_mallsampah.png" alt="Banner Produk Hijau">
+                            <img class="show-for-small-only" src="https://placehold.it/1200x750/777?text=Produk-Hijau" alt="Banner Produk Hijau">                            
                         </figure>
                     </li>
                     <li class="orbit-slide">
                         <figure class="orbit-figure">
-                            <img class="orbit-image" src="./assets/img/banner/banner-zero-waste_mallsampah.png" alt="Banner Zero Waste">
+                            <img class="orbit-image hide-for-small-only" src="./assets/img/banner/banner-zero-waste_mallsampah.png" alt="Banner Zero Waste">
+                            <img class="show-for-small-only" src="https://placehold.it/1200x750/777?text=Zero-Waste" alt="Banner Zero Waste">                            
                         </figure>
                     </li>
                 </ul>
@@ -89,7 +113,7 @@ meta-description: Isi Meta Description Disini
     </section>
 
     <section class="ms-section__our-hero">
-        <div class="grid-container">
+        <div class="grid-container fluid ms-grid-container">
             <div class="grid-x">
                 <div class="medium-12 cell text-center">
                     <h2 class="our-hero__title"><strong>PENGEPUL POPULER</strong></h2>
@@ -249,13 +273,13 @@ meta-description: Isi Meta Description Disini
     </section>
 
     <section class="ms-section__our-hero">
-        <div class="grid-container">
+        <div class="grid-container fluid ms-grid-container">
             <div class="grid-x">
                 <div class="medium-12 cell text-center">
                     <h2 class="our-hero__title"><strong>PEMULUNG POPULER</strong></h2>
                 </div>
             </div>
-
+            
             <div class="grid-x grid-margin-x our-hero__container">
                 <div class="medium-3 cell">
                     <div class="our-hero__card--wrapper">

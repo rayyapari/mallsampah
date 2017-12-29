@@ -26,14 +26,71 @@
     {{#ifpage 'home'}}
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <style>
+    @keyframes loader {
+      0% {
+        letter-spacing: -10px;
+        opacity: 0;
+      }
+
+      50% {
+        letter-spacing: 3px;
+        opacity: 1;
+        color: #0C5A4D;
+      }
+
+      100% {
+        letter-spacing: 0;
+        opacity: 0;
+      }
+    }
+
+    .ms-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: white;
+        z-index: 15;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .ms-loader__title {
+        width: 100%;
+        font-size: $font-size-display-1;
+        opacity: 0;
+        animation: loader 3s ease infinite;
+    }
+    </style>
+    {{/ifpage}}
+
+    {{#ifpage 'product-list' 'our-hero-list' 'search-not-found'}}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" />
+    {{/ifpage}}
+
+    {{#ifpage 'product-detail' 'our-hero-detail'}}
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
     {{/ifpage}}
     
   <body>
 
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-    {{> header}}
-    {{> body}}
-    {{> footer}}
+    {{#ifpage 'register' 'login'}}
+      {{> header-secondary}}
+      {{> body}}    
+      {{> footer-secondary}}  
+    {{/ifpage}}
+
+    {{#unlesspage 'register' 'login'}}
+      {{> header}}
+      {{> body}}      
+      {{> footer}}
+    {{/unlesspage}}
 
     <script src="{{root}}assets/js/app.js"></script>
     
@@ -43,8 +100,86 @@
     <script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     <script>
       $(document).ready(function(){
+
+        $(window).load(function() {
+          $(".ms-loader").fadeOut();
+        });
+
         $('.our-hero__container').slick({
           lazyLoad: 'ondemand',
+          infinite: true,
+          speed: 300,
+          slidesToShow: 4,
+          slidesToScroll: 2,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                infinite: true
+              }
+            },
+            {
+              breakpoint: 640,
+              settings: {
+                arrows: false,
+                dots: true,
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+      });
+    </script>
+    {{/ifpage}}
+
+    {{#ifpage 'product-list' 'our-hero-list' 'search-not-found'}}
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.ms-filter__select-two').select2({
+          placeholder: 'Pilih Lokasi'
+        });
+      });
+    </script>
+    {{/ifpage}}
+
+    {{#ifpage 'product-detail' 'our-hero-detail'}}
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.ms-detail__image--wrapper').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: '.ms-detail__image-nav',
+        });
+
+        $('.ms-detail__image-nav').slick({
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          asNavFor: '.ms-detail__image--wrapper',
+          centerMode: false,
+          focusOnSelect: true
+        });
+
+        $('.related__container').slick({
+          lazyLoad: 'ondemand',          
           infinite: true,
           speed: 300,
           slidesToShow: 4,

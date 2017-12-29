@@ -1,0 +1,28 @@
+---
+layout: mallsampah
+title: Search Not Found
+meta-title: Isi Meta Title Disini
+meta-description: Isi Meta Description Disini
+---
+
+<div class="ms-content">
+    {{> search-filter-new}}
+
+    <section class="ms-section__search">
+        <div class="grid-container fluid ms-grid-container">
+            <div class="ms-notif ms-notif__callout ms-notif__callout--large ms-notif__callout--error" data-closable="fade-out">
+                <div class="callout-body">
+                    <p class="ms-no-margin callout-desc">
+                        Hasil dari pencarian pengepul <strong>"Ayah Andri"</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center ms-not-found__container">
+                <h1 class="ms-not-found__title"><strong>Oops... hasil pencarian Anda tidak dapat ditemukan.</strong></h1>
+                <h2 class="ms-no-margin ms-not-found__desc">Silakan melakukan pencarian kembali dengan menggunakan kata kunci lain.</h2>
+            </div>
+        </div>
+    </section>
+    {{> search-cta}}
+</div>

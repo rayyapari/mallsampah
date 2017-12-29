@@ -16,7 +16,7 @@
 @include foundation-accordion;
 @include foundation-accordion-menu;
 // @include foundation-badge;
-// @include foundation-breadcrumbs;
+@include foundation-breadcrumbs;
 @include foundation-button-group;
 // @include foundation-callout;
 // @include foundation-card;
@@ -31,8 +31,8 @@
 @include foundation-media-object;
 // @include foundation-off-canvas;
 @include foundation-orbit;
-// @include foundation-pagination;
-// @include foundation-progress-bar;
+@include foundation-pagination;
+@include foundation-progress-bar;
 @include foundation-slider;
 // @include foundation-sticky;
 @include foundation-reveal;
@@ -61,6 +61,7 @@
 @import 'components/forms';
 @import 'components/header';
 @import 'components/footer';
+@import 'components/search-filter-new';
 
 @import 'components/ms-core';
 @import 'components/ms-page';

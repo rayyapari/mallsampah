@@ -36,13 +36,25 @@
                 </a>
             </div>
             <div class="hide-for-small-only top-bar-right">
-                <ul class="menu ms-top-bar__menu">
+                <ul class="dropdown menu ms-top-bar__menu" data-dropdown-menu>
                     <li><a target="_blank" href="#">Layanan</a></li>
                     <li><a target="_blank" href="#">Blog</a></li>
                     <li><a target="_blank" href="https://www.mallsampah.com/tentang-kami">Tentang</a></li>
-                    <li><a href="https://www.mallsampah.com/user/globallogin">Masuk</a></li>
-                    <li>
-                        <a class="ms-btn ms-btn--rounded ms-btn--small ms-btn--yellow" href="https://www.mallsampah.com/user/register">Daftar</a>
+                    
+                    <!-- Use this if user not yet loggedin -->
+                    <!-- <li><a href="https://www.mallsampah.com/user/globallogin">Masuk</a></li>
+                    <li><a class="ms-btn ms-btn--rounded ms-btn--small ms-btn--yellow" href="https://www.mallsampah.com/user/register">Daftar</a></li> -->
+
+                    <!-- Use this if user already loggedin -->
+                    <li class="ms-top-bar__account--wrapper">
+                        <a class="ms-top-bar__account" href="#">
+                            Akun
+                        </a>
+                        <ul class="menu ms-dropdown__menu">
+                            <li><a href="#">Buka Toko</a></li>
+                            <li><a href="#">Pengaturan Akun</a></li>
+                            <li><a href="#">Keluar</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>

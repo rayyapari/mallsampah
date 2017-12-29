@@ -1,0 +1,132 @@
+.ms-btn__group {
+    border: 1px solid $color-border;
+    height: 40px;
+    line-height: 40px;
+
+    @include breakpoint(small only) {
+        height: 100%;
+    }
+
+    &-item {
+        color: $color-black-secondary;
+
+        &:hover {
+            background-color: $color-blue;
+            color: $color-white-primary;
+        }
+
+        &:nth-child(2) {
+            border: {
+                left: 1px solid $color-border;
+                right: 1px solid $color-border;                
+            }
+
+            @include breakpoint(small only) {
+                border: {
+                    top: 1px solid $color-border;
+                    bottom: 1px solid $color-border;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+
+        &.active {
+            background-color: $color-blue;
+            color: $color-white-primary;
+        }
+    }
+}
+
+.ms-filter__input {
+    background: transparent;
+    color: $color-black-secondary;
+    height: 40px;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+    box-shadow: none;
+    border: 1px solid $color-border;
+    text-transform: capitalize;
+
+    &:focus {
+        background: transparent;
+        outline: none;
+        box-shadow: none;
+        border-color: $color-blue;
+    }
+
+    &::placeholder {
+        color: $color-black-secondary;
+    }
+}
+
+.ms-filter__btn {
+    background-color: $color-blue;
+    color: $color-white-primary;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($color-blue, 7%);
+    }
+}
+
+.ms-filter__title {
+    font-size: $font-size-title;
+    margin-bottom: 5px;
+}
+
+.ms-search__filter {
+    &--wrapper {
+        background-color: #F5F6FA;
+        padding: 25px;
+    }
+}
+
+.ms-filter {
+    &__services--wrapper {
+        @include breakpoint(small only) {
+            height: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__location--wrapper {
+        @include breakpoint(small only) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.ms-filter__category {
+    display: block;
+    color: $color-black-secondary;
+    margin-bottom: 15px;
+
+    &:hover {
+        color: $color-green;
+    }
+
+    &.active {
+        color: $color-green;
+        font-weight: 600;
+    }
+
+    &-label {
+        @include breakpoint(small only) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &--wrapper {
+        margin-top: 25px;
+        color: $color-black-secondary;
+        font-size: $font-size-subheading;
+    }
+
+    &-icon {
+        margin-right: 10px;
+    }
+}

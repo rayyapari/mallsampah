@@ -1,5 +1,17 @@
+.ms-form__group--wrapper {
+    margin-bottom: 50px;
+}
+
 .ms-form__group {
     margin-bottom: 20px;
+
+    &--small {
+        margin-bottom: 10px;
+    }
+
+    &--large {
+        margin-bottom: 40px;
+    }
 }
 
 .ms-input-group {
@@ -30,6 +42,14 @@
             outline: none;
             box-shadow: none;
         }
+
+        &--error {
+            border-color: $color-red;
+        }
+    
+        &--success {
+            border-color: $color-green;
+        }
     }
 }
 
@@ -42,11 +62,38 @@
     &--textarea {
         line-height: 60px;
     }
+
+    &--error {
+        color: $color-red;
+    }
+
+    &--disabled {
+        margin-right: 25px;
+
+        @include breakpoint(small only) {
+            display: block;
+        }
+    }
+
+    &__cta-modal {
+        line-height: 40px;
+        color: $color-blue;
+
+        &:hover {
+            color: darken($color-blue, 7%);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        color: $color-black-disabled;
+    }
 }
 
 .ms-input {
     width: 100%;
-    text-transform: capitalize;
     padding: 10px;
     margin: 0;
     border-radius: 3px;
@@ -77,11 +124,22 @@
         height: 52px;
         font-size: 14px;
     }
+
+    &--error {
+        border-color: $color-red;
+    }
+
+    &--success {
+        border-color: $color-green;
+    }
+
+    &__sign {
+        padding-left: 40px;
+    }
 }
 
 .ms-select {
     width: 100%;
-    text-transform: capitalize;
     margin: 0;
     border-radius: 3px;
     border: 1px solid $color-border;
@@ -111,11 +169,18 @@
         height: 52px;
         font-size: 14px;
     }
+
+    &--error {
+        border-color: $color-red;
+    }
+
+    &--success {
+        border-color: $color-green;
+    }
 }
 
 .ms-textarea {
     width: 100%;
-    text-transform: capitalize;
     padding: 10px;
     margin: 0;
     border-radius: 3px;
@@ -145,6 +210,14 @@
     &--large {
         height: 72px;
         font-size: 14px;
+    }
+
+    &--error {
+        border-color: $color-red;
+    }
+
+    &--success {
+        border-color: $color-green;
     }
 }
 
@@ -189,6 +262,44 @@
             border-radius: 999px;
             vertical-align: middle;
             margin-right: 5px;
+        }
+    }
+}
+
+.ms-input__file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.ms-img-upload {
+    max-width: 125px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__container {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border: 1px solid $color-border;
+        border-radius: 3px;
+        color: $color-black-disabled;
+        padding: 10px;
+        overflow: hidden;
+
+        p {
+            font-size: $font-size-caption;
+        }
+
+        i {
+            font-size: $font-size-display-2;
+            margin: 10px 0;
         }
     }
 }
