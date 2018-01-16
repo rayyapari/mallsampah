@@ -47,6 +47,18 @@
         }
     }
 
+    &--red {
+        border-color: $color-red;
+        background-color: $color-red;
+        color: #FFFFFF;
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            border-color: darken($color-red, 7%);
+            background-color: darken($color-red, 7%);
+        }
+    }
+
     &--blue {
         border-color: $color-blue;
         background-color: $color-blue;

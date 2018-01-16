@@ -105,6 +105,17 @@
           $(".ms-loader").fadeOut();
         });
 
+        $('.ms-reveal__btn--close').click(function () {
+          $('html, body').removeClass('is-reveal-open');
+          $('.reveal-overlay').addClass('fade-out mui-leave mui-leave-active');
+          $('.ms-reveal').addClass('slide-out-up mui-leave mui-leave-active');
+          setTimeout(function () {
+              $('.reveal-overlay').removeClass('fade-out mui-leave mui-leave-active');
+              $('.ms-reveal').removeClass('slide-out-up mui-leave mui-leave-active');
+              $('.reveal-overlay').css('display','none');
+          }, 100);
+      });
+
         $('.our-hero__container').slick({
           lazyLoad: 'ondemand',
           infinite: true,
@@ -214,6 +225,38 @@
           ]
         });
       });
+    </script>
+    {{/ifpage}}
+
+    {{#ifpage 'setting-shop'}}
+    <script>
+      function tambahFoto() {
+        var count = 2;
+        $('.shop-add-img-upload').click(function () {
+            $('.shop-img-upload--wrapper').prepend('<div class="medium-3 cell"><div class="text-center ms-img-upload__container shop-img-upload__container"><p class="ms-no-margin">Klik untuk<br />unggah gambar</p><i class="fa fa-image"></i><p class="ms-no-margin">JPG, JPEG, PNG<br />Max 2Mb</p><input class="ms-no-margin ms-input__file" type="file" set-to="img-ktp-'+count+'" /><img id="img-ktp-'+count+'" class="ms-img-upload" src="#" alt=""></div></div>');
+            count++;
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    var img_id = $(input).attr('set-to');
+        
+                    reader.onload = function(e) {
+                        $('#'+img_id).attr('src', e.target.result);
+                        $('#'+img_id).css('visibility', 'visible');
+                    }
+        
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            $('.ms-input__file').change(function() {
+                readURL(this);
+                $(this).parent().find('p, i').css('visibility','hidden');
+                $(this).css('z-index', 1);
+            });
+        });
+      }
     </script>
     {{/ifpage}}
 

@@ -21,8 +21,8 @@ meta-description: Isi Meta Description Disini
                     </p>
 
                     <ul class="tabs ms-tabs" data-tabs id="setting-shop">
-                        <li class="tabs-title is-active"><a href="#profil-shop" aria-selected="true">Profil Toko</a></li>
-                        <li class="tabs-title"><a data-tabs-target="product" href="#product">Produk</a></li>                                
+                        <li class="tabs-title"><a data-tabs-target="profil-shop" href="#profil-shop">Profil Toko</a></li>
+                        <li class="tabs-title is-active"><a href="#product" aria-selected="true">Produk</a></li>                                
                         <li class="tabs-title"><a data-tabs-target="setting" href="#setting">Pengaturan</a></li>
                     </ul>
                 </div>
@@ -32,7 +32,7 @@ meta-description: Isi Meta Description Disini
                 <div class="medium-12 cell">
 
                     <div class="tabs-content ms-tabs-content" data-tabs-content="setting-shop">
-                        <div class="tabs-panel is-active tabs-shop__content" id="profil-shop">
+                        <div class="tabs-panel tabs-shop__content" id="profil-shop">
                             <h2 class="tabs-shop__title"><strong>Profil Toko</strong></h2>
                             <div class="grid-x ms-form__group--small tabs-shop__form-group">
                                 <div class="medium-3 cell tabs-shop__form-label">Nama Toko</div>
@@ -59,16 +59,16 @@ meta-description: Isi Meta Description Disini
                                 <div class="medium-9 cell tabs-shop__form-val">Makassar/Sulawesi Selatan</div>
                             </div>
                         </div>
-                        <div class="tabs-panel tabs-shop__content" id="product">
+                        <div class="tabs-panel is-active tabs-shop__content" id="product">
                             <div class="grid-x">
                                 <div class="medium-auto cell"></div>
                                 <div class="medium-3 cell">
-                                    <button class="ms-btn ms-btn--medium ms-btn--blue">Tambah Produk</button>
+                                    <button class="ms-btn ms-btn--medium ms-btn--blue ms-btn__add" data-toggle="shop-form">Tambah Produk</button>
                                 </div>
                             </div>
 
                             <div class="grid-x">
-                                <div class="medium-12 cell tabs-shop-form__add">
+                                <div id="shop-form" class="medium-12 cell tabs-shop-form__add" data-toggler data-animate="fade-in">
                                     <h3 class="tabs-shop__title"><strong>Produk</strong></h3>
 
                                     <div class="grid-x ms-form__group">
@@ -157,11 +157,223 @@ meta-description: Isi Meta Description Disini
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="grid-x ms-form__group">
+                                        <div class="medium-4 cell">
+                                            <label class="ms-label" for="foto-identitas">Foto KTP/SIM/Passport</label>
+                                        </div>
+                                        <div class="medium-8 cell">
+
+                                            <div class="grid-x grid-padding-x shop-img-upload--wrapper">
+                                                <div class="medium-3 cell">
+                                                    <div class="text-center ms-img-upload__container shop-img-upload__container">
+                                                        <p class="ms-no-margin">Klik untuk<br />unggah gambar</p>
+                                                        <i class="fa fa-image"></i>
+                                                        <p class="ms-no-margin">
+                                                            JPG, JPEG, PNG
+                                                            <br />
+                                                            Max 2Mb
+                                                        </p>
+                                                        <input class="ms-no-margin ms-input__file" type="file" set-to="img-ktp-1" />
+                                                        <img id="img-ktp-1" class="ms-img-upload" src="#" alt="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="medium-3 cell">
+                                                    <div class="text-center ms-img-upload__container shop-add-img-upload shop-img-upload__container">
+                                                        <h1 class="ms-no-margin">+</h1>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="grid-x ms-form__group">
+                                        <div class="medium-4 cell"></div>
+                                        <div class="medium-8 cell">
+                                            <div class="grid-x grid-margin-x">
+                                                <div class="medium-3 cell">
+                                                    <button class="ms-btn ms-btn--medium ms-btn--blue">Simpan</button>
+                                                </div>
+                                                <div class="medium-3 cell">
+                                                    <button class="ms-btn ms-btn--medium ms-btn--red">Batal</button>
+                                                </div>
+                                                <div class="medium-auto cell"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="medium-12 cell tabs-shop-our-product">
+                                    <h4 class="tabs-shop__title"><strong>Produk Saya</strong></h4>
+                                    <div class="grid-x grid-padding-x small-up-1 medium-up-3 large-up-4">
+                                        {{#repeat 8}}
+                                        <div class="cell">
+                                            <div class="our-hero__card__container our-product__card__container">
+                                                <div class="our-hero__card our-product__card text-center">
+                                                    <img class="our-hero__img our-product__img" src="https://www.mallsampah.com/upload/img-product/311707211215604-xvii-40-mallsampah-product.JPG" alt="">
+                                                    <div class="our-product__detail">
+                                                        <p class="ms-truncate ms-no-margin our-product__title"><strong>Botol Hias</strong></p>
+                                                        <div class="our-product__link">
+                                                            <p class="ms-no-margin"><a href="#">Sunting</a> | <a data-open="modalHapus">Hapus</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {{/repeat}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="tabs-panel tabs-shop__content" id="setting">
-                            ray
+                            <div class="ms-form__group--wrapper">
+                                <h5 class="tabs-shop__title"><strong>Pengaturan Toko</strong></h5>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-3 cell">
+                                        <label class="ms-label" for="shop-name">Nama Toko</label>
+                                    </div>
+                                    <div class="medium-9 cell">
+                                        <input id="shop-name" type="text" class="ms-input ms-input--medium" />
+                                    </div>
+                                </div>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-3 cell">
+                                        <label class="ms-label" for="domain-name">Nama Domain</label>
+                                    </div>
+                                    <div class="medium-9 cell">
+                                        <span class="ms-label--disabled">ayah.andri.chayank.bunda@gmail.com</span>
+                                        <a class="ms-label__cta-modal">Ubah Domain</a>
+                                    </div>
+                                </div>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-3 cell">
+                                        <label class="ms-label" for="slogan">Slogan Toko</label>
+                                    </div>
+                                    <div class="medium-9 cell">
+                                        <textarea name="slogan" id="slogan" class="ms-textarea ms-textarea--medium"></textarea>
+                                    </div>
+                                </div>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-3 cell">
+                                        <label class="ms-label" for="deskripsi">Deskripsi Toko</label>
+                                    </div>
+                                    <div class="medium-9 cell">
+                                        <textarea name="deskripsi" id="deskripsi" class="ms-textarea ms-textarea--medium"></textarea>
+                                    </div>
+                                </div>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-3 cell">
+                                        <label class="ms-label" for="logo">Logo Toko</label>
+                                    </div>
+                                    <div class="medium-9 cell">
+                                        <div class="text-center ms-img-upload__container">
+                                            <p class="ms-no-margin">Klik untuk<br />unggah gambar</p>
+                                            <i class="fa fa-image"></i>
+                                            <p class="ms-no-margin">
+                                                JPG, JPEG, PNG
+                                                <br />
+                                                Max 2Mb
+                                            </p>
+                                            <input class="ms-no-margin ms-input__file" type="file" set-to="img-logo" />
+                                            <img id="img-logo" class="ms-img-upload" src="#" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ms-form__group--wrapper">
+                                <h6 class="tabs-shop__title"><strong>Informasi Kontak Toko</strong></h6>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-3 cell">
+                                        <label class="ms-label" for="no-hp1">Nomor Handphone 1</label>
+                                    </div>
+                                    <div class="medium-9 cell">
+                                        <div class="input-group ms-input-group">
+                                            <span class="input-group-label ms-input-group__label">+62</span>
+                                            <input id="no-hp1" class="input-group-field ms-input-group__field" type="number">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-3 cell">
+                                        <label class="ms-label" for="no-hp2">Nomor Handphone 2</label>
+                                    </div>
+                                    <div class="medium-9 cell">
+                                        <div class="input-group ms-input-group">
+                                            <span class="input-group-label ms-input-group__label">+62</span>
+                                            <input id="no-hp2" class="input-group-field ms-input-group__field" type="number">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ms-form__group--wrapper">
+                                <h6 class="tabs-shop__title"><strong>Informasi Alamat Toko</strong></h6>
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-3 cell">
+                                        <label class="ms-label" for="alamat">Alamat Lengkap</label>
+                                    </div>
+                                    <div class="medium-9 cell">
+                                        <textarea name="alamat" id="alamat" class="ms-textarea ms-textarea--medium"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-3 cell">
+                                        <label class="ms-label" for="lokasi">Lokasi</label>
+                                    </div>
+                                    <div class="medium-9 cell">
+                                        <div class="grid-x grid-margin-x ms-form__location--wrapper">
+                                            <div class="small-12 medium-auto cell ms-form__location">
+                                                <select name="provinsi" id="provinsi" class="ms-select ms-select--medium">
+                                                    <option value="" disabled selected="true">Provinsi</option>
+                                                    <option value="">Sulawesi Selatan</option>
+                                                </select>
+                                            </div>
+                                            <div class="small-12 medium-auto cell ms-form__location">
+                                                <select name="kota" id="kota" class="ms-select ms-select--medium">
+                                                    <option value="" disabled selected="true">Kota</option>
+                                                    <option value="">Makassar</option>
+                                                </select>
+                                            </div>
+                                            <div class="small-12 medium-auto cell ms-form__location">
+                                                <select name="kecamatan" id="kecamatan" class="ms-select ms-select--medium">
+                                                    <option value="" disabled selected="true">Kecamatan</option>
+                                                    <option value="">Tamalate</option>
+                                                </select>
+                                            </div>
+                                            <div class="small-12 medium-auto cell ms-form__location">
+                                                <select name="kelurahan" id="kelurahan" class="ms-select ms-select--medium">
+                                                    <option value="" disabled selected="true">Kelurahan</option>
+                                                    <option value="">Parang Tambung</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-x ms-form__group--large">
+                                    <div class="medium-3 cell">
+                                        <label class="ms-label" for="kode-pos">Kode Pos</label>
+                                    </div>
+                                    <div class="medium-9 cell">
+                                        <input id="kode-pos" type="text" class="ms-input ms-input--medium" />
+                                    </div>
+                                </div>
+
+                                <div class="grid-x ms-form__group">
+                                    <div class="medium-3 cell"></div>
+                                    <div class="medium-3 cell">
+                                        <button class="ms-btn ms-btn--medium ms-btn--blue">Sunting Toko Anda</button>
+                                    </div>
+                                    <div class="medium-auto cell"></div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -170,4 +382,26 @@ meta-description: Isi Meta Description Disini
             </div>
         </div>
     </section>
+</div>
+
+<div class="tiny reveal ms-reveal" id="modalHapus" data-reveal data-animation-in="slide-in-down fast" data-animation-out="slide-out-up fast">
+    <div class="ms-reveal__header">
+        <p class="ms-no-margin ms-reveal__title">Konfirmasi</p>
+        <button class="close-button ms-reveal__btn--close" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="ms-reveal__body">
+        <p class="ms-no-margin ms-reveal__desc">
+            Apakah Anda yakin ingin menghapus produk ini ?
+        </p>
+        <div class="grid-x grid-margin-x ms-reveal__btn--wrapper">
+            <div class="medium-6 cell">
+                <button class="ms-btn ms-btn--medium ms-btn--blue">Hapus</button>
+            </div>
+            <div class="medium-6 cell">
+                <button class="ms-btn ms-btn--medium ms-btn--red ms-btn__cancel" data-close>Batal</button>
+            </div>
+        </div>
+    </div>
 </div>

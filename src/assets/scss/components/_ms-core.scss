@@ -377,6 +377,16 @@ strong {
         margin-bottom: 25px;
     }
 
+    &__btn--wrapper {
+        margin-top: 15px;
+
+        .ms-btn__cancel {
+            @include breakpoint(small only) {
+                margin-top: 10px;
+            }
+        }
+    }
+
     &__btn--close {
         position: absolute;
         top: 50%;

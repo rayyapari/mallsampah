@@ -219,6 +219,10 @@
             position: relative;
             height: 150px;
 
+            @include breakpoint(small up) {
+                margin-bottom: 50px;
+            }
+
             a {
                 position: absolute;
                 left: 50%;
@@ -494,9 +498,14 @@
         position: relative;
         text-align: center;
         height: 650px;
+        overflow: hidden;
 
         @include breakpoint(medium down) {
             height: 500px;
+        }
+
+        &:hover > .zerowaste__img {
+            transform: scale(1.1);
         }
 
         .zerowaste__category {
@@ -506,22 +515,12 @@
             transform: translate(-50%, -50%);
         }
     }
-    .zerowaste--left {
-        background: {
-            image: url('../img/bg-zerowaste-home_mallsampah.png');
-            size: cover;
-            position: center center;
-            repeat: no-repeat;
-        }
-    }
 
-    .zerowaste--right {
-        background: {
-            image: url('../img/bg-zerowaste-office_mallsampah.png');
-            size: cover;
-            position: center center;
-            repeat: no-repeat;
-        }
+    .zerowaste__img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        transition: transform 0.3s ease;
     }
 
     .zerowaste__title {
@@ -947,7 +946,7 @@
             z-index: 3 !important;
 
             img {
-                height: 425px;
+                height: 480px;
                 width: 100%;
                 object-fit: cover;
 
@@ -1001,6 +1000,14 @@
 
             .rate-rates {
                 margin-bottom: 10px;
+            }
+
+            .rate-progress--wrapper {
+                color: $color-black-secondary;
+
+                &:hover {
+                    background-color: lighten($color-blue, 35%);
+                }
             }
         }
     }
@@ -1068,6 +1075,16 @@
         }
     }
 
+    &__additional {
+        .ms-detail__contact {
+            margin-bottom: 25px;
+
+            li > a {
+                display: inline-block;
+            }
+        }
+    }
+
     &__socmed {
         margin-top: 10px;
 
@@ -1121,6 +1138,33 @@
 .ms-setting__shop {
     padding: 25px 0;
 
+    .shop-img-upload__container {
+        display: inline-block;
+        margin: 0;
+        height: 135px;
+        width: 135px;
+        cursor: pointer;
+
+        .fa-image {
+            font-size: 30px;
+        }
+
+        .ms-input__file {
+            height: 135px;
+            width: 135px;
+        }
+    }
+
+    .shop-add-img-upload {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-size: $font-size-display-2;
+            width: 100%;
+        }
+    }
+
     .setting-shop {
         &__info--wrapper {
             @include breakpoint(small only) {
@@ -1167,6 +1211,24 @@
             @include breakpoint(small only) {
                 padding: 25px;
             }
+
+            .ms-btn__add {
+                @include breakpoint(small only) {
+                    margin-bottom: 25px;
+                }
+            }
+
+            .ms-btn--red {
+                @include breakpoint(small only) {
+                    margin-top: 10px;
+                }
+            }
+
+            .ms-form__location {
+                @include breakpoint(small only) {
+                    margin-bottom: 10px;
+                }
+            }
         }
 
         &__title {
@@ -1199,6 +1261,59 @@
                 @include breakpoint(small only) {
                     display: none;
                 }
+            }
+        }
+
+        &-form__add {
+            display: none;
+            margin-bottom: 35px;
+            border-bottom: 1px solid $color-border;
+        }
+
+        &-our-product {
+            .our-product__card {
+                overflow: hidden;
+
+                &:hover::before {
+                    height: calc(100% - 141px) !important;
+                }
+
+                &::before {
+                    height: 100%;
+                    bottom: 0;
+                }
+
+                &:hover > .our-product__detail {
+                    opacity: 1;
+                }
+            }
+            .our-product__img {
+                height: 215px;
+            }
+
+            .our-product__detail {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                padding: 10px;
+                color: $color-white-primary;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .our-product__link {
+                a {
+                    color: $color-white-primary;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .our-product__title {
+                font-size: $font-size-title;
             }
         }
     }

@@ -5,7 +5,7 @@
                 <div class="small-12 medium-8 cell ms-centered footer__content">
                     <label for="email-subscribe">Dapatkan Informasi Terbaru Dari Kami</label>
                     <input type="text" class="ms-input ms-input--small" id="email-subscribe" name="email-subscribe" placeholder="Email">
-                    <button type="button" class="ms-btn ms-btn--rounded ms-btn--small ms-btn--yellow" data-open="modalRegister">Subscribe</button>
+                    <button type="button" class="ms-btn ms-btn--rounded ms-btn--small ms-btn--yellow" data-open="modalSubscribe">Subscribe</button>
                 </div>
             </div>
         </div>
@@ -69,10 +69,10 @@
     </div>
 </footer>
 
-<div class="tiny reveal ms-reveal" id="modalSubscribe" data-reveal data-animation-in="slide-in-down fast" data-animation-out="slide-out-up fast">
+<div class="tiny reveal ms-reveal" id="modalSubscribe" data-closeable data-reveal data-animation-in="slide-in-down fast" data-animation-out="slide-out-up fast">
     <div class="ms-reveal__header">
         <p class="ms-no-margin ms-reveal__title">Informasi</p>
-        <button class="close-button ms-reveal__btn--close" data-close aria-label="Close modal" type="button">
+        <button class="close-button ms-reveal__btn--close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>

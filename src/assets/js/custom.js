@@ -1,3 +1,5 @@
+'use strict';
+
 import $ from 'jquery';
 
 $(document).ready(function () {
@@ -53,5 +55,7 @@ $(document).ready(function () {
         $(this).parent().find('p, i').css('visibility','hidden');
         $(this).css('z-index', 1);
     });
+
+    tambahFoto();
     /* end Function for Upload File */
 });
